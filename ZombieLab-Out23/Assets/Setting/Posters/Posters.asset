@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e40eb15c8486243bbbde7e56d33db6, type: 3}
+  m_Name: Posters
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: f823efa7fa1e45c4b8eab1644d1c7a62, type: 3}
+  - {fileID: 21300000, guid: d4da46fdc7702c546a25a5646ecd79d4, type: 3}
+  - {fileID: 21300000, guid: f5a2f07307158df4ba2ccbbf1b4b94fd, type: 3}
+  - {fileID: 21300000, guid: ec6bdbd9677586b44b1c1910ad0cde28, type: 3}
+  - {fileID: 21300000, guid: 56865c69a403e7c4a9a14270f64f9d5c, type: 3}
+  - {fileID: 21300000, guid: 5622a814a0a170d49b82147324c7c792, type: 3}
+  - {fileID: 21300000, guid: 99d811f289a9cb34a8ff2553146a73bd, type: 3}
+  - {fileID: 21300000, guid: 02332926705659b4a8051ef6afd255a5, type: 3}
+  - {fileID: 21300000, guid: 2d4e28d189734d84eabad8112d9494cb, type: 3}
+  - {fileID: 21300000, guid: 0f060aa31404372428043d2afd9ef3bf, type: 3}
+  - {fileID: 21300000, guid: fc77870f174e6c64ea2ac91af0699349, type: 3}
+  - {fileID: 21300000, guid: 15847ea60b377864e85d7a6340c360d5, type: 3}
+  - {fileID: 21300000, guid: 0f94099900bac184680d6a3437a48749, type: 3}

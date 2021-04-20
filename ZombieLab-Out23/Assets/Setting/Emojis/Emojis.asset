@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e40eb15c8486243bbbde7e56d33db6, type: 3}
+  m_Name: Emojis
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 437b363dc3d4ce24b855f17714daef3f, type: 3}
+  - {fileID: 21300000, guid: c8d507d4bd6ed6048ae92b725b9ab71b, type: 3}
+  - {fileID: 21300000, guid: 6d2d7e9cdb6c24649b10c938cfb68f17, type: 3}
+  - {fileID: 21300000, guid: e662999c35ce6fa4ba1e48173c5e49a3, type: 3}
+  - {fileID: 21300000, guid: f9f872f3e891d484f926f5445d8dbd5d, type: 3}
+  - {fileID: 21300000, guid: 1408b14eec540b74786616a301cb87e2, type: 3}
+  - {fileID: 21300000, guid: 812a80dbcd84b1d45ab2901608ddebec, type: 3}
+  - {fileID: 21300000, guid: 8ae7403d81d91ee4899ec290b5849159, type: 3}
+  - {fileID: 21300000, guid: 46b8ce8beb047184584ff29835a803df, type: 3}
+  - {fileID: 21300000, guid: 6e1a32a6842ac634ba34964cf01d7c92, type: 3}

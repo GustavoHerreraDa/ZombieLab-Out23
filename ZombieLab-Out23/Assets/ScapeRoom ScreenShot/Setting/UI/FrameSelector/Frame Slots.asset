@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a773d3e619eb04493c9609a8a9ffe5, type: 3}
+  m_Name: Frame Slots
+  m_EditorClassIdentifier: 
+  slotUIDatas:
+  - {fileID: 11400000, guid: 2fef9e8ec08ddbb4981fc2619e5ef032, type: 2}
+  - {fileID: 11400000, guid: 6e4a6f7a72212354fa28016acc533c82, type: 2}
+  - {fileID: 11400000, guid: 4d82734ffa1571e44b88754a4a9a44dd, type: 2}
+  - {fileID: 11400000, guid: 1fee1b9320d87cd43a2c569ed710cd23, type: 2}
+  - {fileID: 11400000, guid: 18307fe2a1bb2ce469640a889ca6ff85, type: 2}
+  - {fileID: 11400000, guid: 34636fed8161ff84b89e2235a294d0d8, type: 2}
+  - {fileID: 11400000, guid: e1afb8421a9ee3c4a95e787750503c63, type: 2}
+  - {fileID: 11400000, guid: 5dbdb6791a5821149bcf6c43ba61c7fb, type: 2}
+  - {fileID: 11400000, guid: c40420557b5bd4b48bdba812840bb221, type: 2}

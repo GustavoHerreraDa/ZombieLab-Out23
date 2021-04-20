@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35142bfe11b26e64da7615a4fbf9e925, type: 3}
+  m_Name: Pista1
+  m_EditorClassIdentifier: 
+  PistaName: 'Pista 1:'
+  TextRich: "Debes comparar los informes de las vacunas en base a:  <br><br>Reaccion
+    Positiva del paciente <br>Efectos Secundarios  <br>Porcentaje de efectividad
+    en mayores de 60  <br>Porcentaje de efectividad en menores de 10  <br>Mutaciones  
+    <br><br>y ordenar las vacunas de la menos efectiva a la m\xE1s efectiva, coloc\xE1ndolas
+    en las cajas de cristal. "
+  sizeText: 250
+  image: {fileID: 0}

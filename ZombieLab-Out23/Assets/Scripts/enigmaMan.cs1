@@ -1,0 +1,309 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+
+public class enigmaMan : MonoBehaviour
+{
+    public playerFps pf, pf2;
+    public GameObject enigma, resultado;
+    public Text tituloAcertijo, resultadoAcertijo, resultadoAcertijoCuerpo; 
+    
+    /// <summary>
+    ///para acertijo 2 y 4,en este caso candados numericos y texto.
+    /// REvisar qu esconda todo y muestre los candados y canvas particular. 
+    /// </summary>
+    public GameObject enigma1, enigma2, enigma3,enigma4, enigma5, enigma6, enigma7,enigma8, enigma9, enigma10;
+    public GameObject winnerCert;
+
+
+    /// <summary>
+    /// despues de acertijo x, cambair a camara 2, y luego a camara 3.
+    /// por eso se necesita referencia :)
+    /// </summary>
+    public GameObject camara1, camara2,camara3;
+    
+    
+    [TextArea]
+    public Text cuerpoAcertijo;
+    
+    public levelMan lm;
+    public string qJson; //el json que se va a cargar
+    public InputField respuestaInput, respuestaInput7, respuestaInput8; //el campo de entrada para la respuesta
+    private string respuesta, premio;
+    public int enigmaActual=0, valor;
+
+    string fileName;
+
+
+    public void showMe()
+    {
+        Invoke("muestraEnigma",0.2f); //solo para prueba, debe estar en otro lado (cuadno toca baul, para moestrar enigma)
+    }
+
+    public void Start()
+    {
+        //solo para prueba, debe estar en otro lado (cuadno toca baul, para moestrar enigma)
+        //Invoke("muestraEnigma", 12.0f); 
+        //carga json y parsea...
+        enigmaActual = lm.acertijoActual; //obtiene el # de acert5rijo desde manager
+        qJson = "barbanegra.json";
+        fileName = Path.Combine(Application.streamingAssetsPath, qJson);
+    }
+
+    public void muestraEnigma()
+    {
+        resultado.gameObject.SetActive(false);//esto es en caso de repetición..
+        pf.canMove = false; //desativa script
+        pf2.canMove = false; //desativa script en camara 2
+        //muestra enigma
+        if (enigmaActual == 1)
+        {
+            //candado 2, enigma2
+            candado2.gameObject.SetActive(true);
+            enigma2y4.gameObject.SetActive(true);
+        } else if (enigmaActual == 3)
+        {
+            //candado 4, enigma4
+            candado4.gameObject.SetActive(true);
+            enigma2y4.gameObject.SetActive(true);
+        } else if (enigmaActual == 6)
+        {
+            //muestra enigma #7
+            enigma7.gameObject.SetActive(true);
+        }
+        else if (enigmaActual == 7)
+        {
+            //muestra enigma #8
+            enigma8.gameObject.SetActive(true);
+        }
+        else if (enigmaActual == 8)
+        {
+            //muestra enigma #9
+            candado9.gameObject.SetActive(true);
+            enigma2y4.gameObject.SetActive(true);
+        }
+        else
+        {
+            //si no son acertijos 2 o 4 muestra papiro x default, 0 candados.
+            enigma.gameObject.SetActive(true);
+            InputField res1 = FindObjectOfType<InputField>();
+            res1.text = "";
+            //res1.ActivateInputField();
+            res1.Select();
+            
+
+        }
+        StartCoroutine(GetRequest(fileName));
+    }
+
+
+    public void escondeResultadoCanvas()
+    {
+        resultado.gameObject.SetActive(false);
+        pf.canMove = true; //desativa script
+        pf2.canMove = true; //desativa script en camara #2
+    }
+
+
+    
+    public void checaResultadoEnigma9(bool correcto)
+    {
+        resultado.gameObject.SetActive(true);
+        //esconde todos lso objetos y canvas
+        enigma.gameObject.SetActive(false);
+        candado4.gameObject.SetActive(false);
+        candado2.gameObject.SetActive(false);
+        candado9.gameObject.SetActive(false);
+        enigma2y4.gameObject.SetActive(false);
+        enigma7.gameObject.SetActive(false);
+        enigma8.gameObject.SetActive(false);
+        enigma9.gameObject.SetActive(false);
+        resultadoAcertijo.gameObject.SetActive(true);
+
+        //muestra ultimo panel
+        enigma9.SetActive(true);
+    }
+
+    public void winner()
+    {
+        //fin del juego
+        lm.tmpTime = 14400; //aumenta el tiempo a 4 horas
+        winnerCert.gameObject.SetActive(true);
+    }
+
+
+
+    public void checaResultadoEnigma2y4(bool correcto)
+    {
+        resultado.gameObject.SetActive(true);
+        //esconde todos lso objetos y canvas
+        enigma.gameObject.SetActive(false);
+        candado4.gameObject.SetActive(false);
+        candado2.gameObject.SetActive(false);
+        candado9.gameObject.SetActive(false);
+        enigma2y4.gameObject.SetActive(false);
+        enigma7.gameObject.SetActive(false);
+        enigma8.gameObject.SetActive(false);
+        enigma9.gameObject.SetActive(false);
+        resultadoAcertijo.gameObject.SetActive(true);
+        if (correcto == true)
+        {
+            resultadoAcertijo.text = "¡Muy bien!";
+            resultadoAcertijoCuerpo.text = "Has ganado " +premio;
+            lm.incrementaMonedas(valor);//suma monedas
+            enigmaActual += 1;//si todavía hay engimas por resolver, en caso contrario regresarlo.
+        }
+    }
+
+    void escondeCanvas()
+    {
+        resultado.gameObject.SetActive(false);
+        //esconde todos lso objetos y canvas
+        enigma.gameObject.SetActive(false);
+        candado4.gameObject.SetActive(false);
+        candado2.gameObject.SetActive(false);
+        candado9.gameObject.SetActive(false);
+        enigma2y4.gameObject.SetActive(false);
+        enigma7.gameObject.SetActive(false);
+        enigma8.gameObject.SetActive(false);
+        enigma9.gameObject.SetActive(false);
+        resultadoAcertijo.gameObject.SetActive(false);
+        pf.canMove=true;
+        pf2.canMove=true;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("r"))
+        {
+            print("space key was pressed");
+            escondeCanvas();
+        }
+    }
+
+    public void checaResultadoEnigma()
+    {
+        //revisa si la respuesta es correcta, en caso de que lo sea regresa ctl. Falta implementar...
+        //Debug.Log(respuestaInput.text);
+        resultado.gameObject.SetActive(true);
+        //esconde todos lso objetos y canvas
+        enigma.gameObject.SetActive(false);
+        candado4.gameObject.SetActive(false);
+        candado2.gameObject.SetActive(false);
+        candado9.gameObject.SetActive(false);
+        enigma2y4.gameObject.SetActive(false);
+        enigma7.gameObject.SetActive(false);
+        enigma8.gameObject.SetActive(false);
+        enigma9.gameObject.SetActive(false);
+        
+        resultadoAcertijo.gameObject.SetActive(true);
+        if (respuestaInput.text == respuesta && enigmaActual == 8)
+        {
+            //fin del juego
+            lm.tmpTime = 14400; //aumenta el tiempo a 4 horas
+            winnerCert.gameObject.SetActive(true);
+        }
+
+        else if (respuestaInput.text.ToLower() == respuesta || respuestaInput7.text == respuesta || respuestaInput8.text == respuesta){
+            //cambair de camara después de acertijo #5
+            if (enigmaActual == 4)
+            {
+                camara1.SetActive(false);
+                camara2.SetActive(true);
+            }
+            resultadoAcertijo.text = "¡Muy bien!";
+            resultadoAcertijoCuerpo.text = "Has ganado " +premio;
+            lm.incrementaMonedas(valor);//suma monedas
+            enigmaActual += 1;//si todavía hay engimas por resolver, en caso contrario regresarlo.
+        }
+        else
+        {
+            resultadoAcertijo.text = "Incorrecto. ";
+            resultadoAcertijoCuerpo.text ="Vuelve a intentar";
+            Invoke("muestraEnigma", 2.0f);
+            
+        }
+
+    }
+    
+    IEnumerator GetRequest(string uri)
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
+        {
+            // Request and wait for the desired page.
+            yield return webRequest.SendWebRequest();
+            string json = webRequest.downloadHandler.text;
+            ListEnigmas q = JsonUtility.FromJson<ListEnigmas>(json);
+            respuesta = q.Enigmas[enigmaActual].Clave;
+            if (enigmaActual == 1 || enigmaActual == 3 || enigmaActual == 8) {
+                cuerpoAcertijo2y4.text = q.Enigmas[enigmaActual].Acertijo;
+                tituloAcertijo2y4.text = q.Enigmas[enigmaActual].Titulo;
+                //Debug.Log(q.Enigmas[enigmaActual].Acertijo);
+            }
+            else
+            {
+                cuerpoAcertijo.text = q.Enigmas[enigmaActual].Acertijo;
+                tituloAcertijo.text = q.Enigmas[enigmaActual].Titulo;
+            }
+
+            premio = q.Enigmas[enigmaActual].Premio;
+            valor = q.Enigmas[enigmaActual].Valor;
+            Debug.Log("voya  bsucar el enigma en: "+enigmaActual);
+            Debug.Log(q.Enigmas[enigmaActual].Acertijo);
+        }
+    }
+    
+    /// <summary>
+    ///funcion dedicada a carga el json, parsearlo y tenerlo lsito para mostrar
+    /// </summary>
+    /// <param name="fileName"></param>
+    public void LoadJson(string fileName)
+    {
+        using (StreamReader r = new StreamReader(fileName))
+        {
+            string json = r.ReadToEnd();
+            ListEnigmas q = JsonUtility.FromJson<ListEnigmas>(json);
+
+            respuesta = q.Enigmas[enigmaActual].Clave;
+            cuerpoAcertijo.text = q.Enigmas[enigmaActual].Acertijo;
+            tituloAcertijo.text = q.Enigmas[enigmaActual].Titulo;
+            
+            /*
+            for(int i=0; i<q.Enigmas.Length; i++)
+            {
+                //Debug.Log(i + q.Quests[i].Name + " "+q.Quests[i].Reward) ;
+                Debug.Log(q.Enigmas[i].Titulo);
+                Debug.Log(q.Enigmas[i].Acertijo);
+                Debug.Log(q.Enigmas[i].Premio);
+                Debug.Log(q.Enigmas[i].Valor);
+                Debug.Log(q.Enigmas[i].TipoAcertijo);
+            }*/
+            
+        }
+    }
+
+
+}
+
+
+[Serializable]
+public class ListEnigmas  {
+    public Enigmas[] Enigmas;
+}
+
+[Serializable]
+public class Enigmas
+{
+    public string Titulo;
+    public string Acertijo;
+    public string Premio;
+    public string Clave;
+    public int Valor;
+    public int TipoAcertijo;
+}
+

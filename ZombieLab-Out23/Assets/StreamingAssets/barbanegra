@@ -1,0 +1,79 @@
+{"Enigmas":
+
+[{
+"Titulo":"Enimga 1",
+"Acertijo":"Tras decenas de años de tirar a prisioneros por la borda y saquear un montón de ciudades. El pirata solo consiguio hacerse de un tesoro menor a 100 monedas. Pero para colmo las acomodaba en seis pilas iguales y le sobraban cinco monedas, para hacer cinco pilas le sobraban cuatro monedas para hacer cuatro pilas le sobraban tres monedas y para hacer tres pilas le sobraban 2 monedas. ¿Cuántas monedas tenía este pirata?",
+"Premio":"",
+"Valor":100,
+"Clave":"dosis42",
+"TipoAcertijo":1
+},
+
+{"Titulo":"Enimga 2",
+"Acertijo":"\r\n   Lunes: 156 \r\n   Martes:268 \r\n   Miércoles: 3912 \r\n   Jueves: 4610 \r\n   Viernes: 5712 \r\n   Sábado: 6612 \r\n   Domingo: ¿?",
+ "Premio":"",
+"Valor":75,
+"Clave":"1101",
+"TipoAcertijo":2
+},
+
+{"Titulo":"Enimga 3",
+"Acertijo":"Observa bien y razona las siguientes direcciones: \r\n 1. Oeste - Sur Este - Norte - Norte  \r\n 2. Oeste - Sur - Este - Norte \r\n 3. Este - Sur - Oeste - Sur - Este \r\n 4. Este Sur \r\n 5. Norte - Este - Sur",
+ "Premio":"",
+"Valor":60,
+"Clave":"1192",
+"TipoAcertijo":1
+ },
+
+ {"Titulo":"Enimga 4",
+  "Acertijo":"\r\n Los Angeles, Seúl, Barcelona, Atlanta, Sydney, Atenas. \r\n\r\n ¿Qué ciudad sigue en esta secuencia?",
+  "Premio":"",
+  "Valor":150,
+  "Clave":"coronavirus",
+  "TipoAcertijo":4
+ },
+
+ {"Titulo":"Enimga 5",
+  "Acertijo":"\r\n ¿Cuál es la profesión de Julios Prat?",
+  "Premio":"",
+  "Valor":97,
+  "Clave":"pandemia",
+  "TipoAcertijo":1
+ },
+ {"Titulo":"Enimga 6",
+  "Acertijo":"\r\n Por tu galante compañía no ruega más Clarita. Liada está: vende y cobra sillas. No se estanca nada y piensa en su buen vivir antes que en otra cosa. \r\n ¿Y sabes qué? ¡No se deja ponderar! \r\n\r\n ¡La clave es las iniciales de los países!",
+  "Premio":"",
+  "Valor":37,
+  "Clave":"405",
+  "TipoAcertijo":1
+ },
+ {"Titulo":"Enimga 7",
+  "Acertijo":"",
+  "Premio":"",
+  "Valor":54,
+  "Clave":"1327",
+  "TipoAcertijo":1
+ },
+ {"Titulo":"Enimga 8",
+  "Acertijo":"",
+  "Premio":"",
+  "Valor":19,
+  "Clave":"4100",
+  "TipoAcertijo":1
+ },
+ {"Titulo":"Enimga 9",
+  "Acertijo":"Para abrir este ataúd se requieren 3 dígitos \n\n¡Sumar todas las monedas encontradas!",
+  "Premio":"",
+  "Valor":74,
+  "Clave":"gripea",
+  "TipoAcertijo":1
+ },
+ {"Titulo":"Enimga 10",
+  "Acertijo":"Para abrir este ataúd se requieren 3 dígitos \n\n¡Sumar todas las monedas encontradas!",
+  "Premio":"",
+  "Valor":8,
+  "Clave":"satanas",
+  "TipoAcertijo":1
+ }
+ 
+]}

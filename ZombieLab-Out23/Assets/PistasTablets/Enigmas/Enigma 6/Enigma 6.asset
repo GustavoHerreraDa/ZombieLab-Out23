@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84bbf675999460a4ba38936d8ea02e75, type: 3}
+  m_Name: Enigma 6
+  m_EditorClassIdentifier: 
+  Pistas:
+  - {fileID: 11400000, guid: c3b818fd3f2d57c47a243cf3ddbb7510, type: 2}
+  - {fileID: 11400000, guid: 02f42afa6e453bd4b9df6d32d02ebf8d, type: 2}
+  - {fileID: 11400000, guid: 35366335c80f38d42b90b52805334dec, type: 2}
+  - {fileID: 11400000, guid: bd0351a36b8dccc4da8119ebdcab3ceb, type: 2}

@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7362480384521529815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1887236363082372429, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: enigma
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cd07cdddb64a774fa86f93f4c16b45e,
+        type: 2}
+    - target: {fileID: 1887236363082372429, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: scroller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664212, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940890226514664214, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_Name
+      value: Tablet 8 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240190841478123562, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_Text
+      value: 'OCTAVO
+
+        ENIGMA'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240190841478123562, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186362613902591614, guid: 67d06afbe6f262d44aa331bad0831d9b,
+        type: 3}
+      propertyPath: canvasTablet
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67d06afbe6f262d44aa331bad0831d9b, type: 3}
