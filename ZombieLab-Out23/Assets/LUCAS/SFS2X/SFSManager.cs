@@ -22,6 +22,9 @@ public class SFSManager : Singleton<SFSManager>
     public SelectAvatar selectAvatar;
     public TMP_InputField userInput;
     public TMP_InputField codeInput;
+    public TMP_InputField codePasswordInput;
+    public CodeRequest codeRequest;
+
     public GameObject screenCode;
     #endregion
 
@@ -45,6 +48,7 @@ public class SFSManager : Singleton<SFSManager>
     {
         Application.targetFrameRate = 60;
         DontDestroyOnLoad(gameObject);
+        codeRequest = GetComponent<CodeRequest>();
         StartCoroutine(GetHost());
     }
 
@@ -155,6 +159,10 @@ public class SFSManager : Singleton<SFSManager>
 
     private void OnLogin(BaseEvent evt)
     {
+        if (!codeRequest.CheckCode(codePasswordInput.text))
+            return;
+
+        
         SmartFoxConnection.SFS.Send(new JoinRoomRequest(codeInput.text.ToUpper()));
     }
 
